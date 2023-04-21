@@ -1,5 +1,8 @@
+import time
+import logging
 import openai
 import os
+
 # use like this: 
 
 # g = Generator()
@@ -7,6 +10,9 @@ import os
 # g.promptTopic(input("Please enter a topic: "))
 
 # g.generateResponse(input(">"))
+
+logging.basicConfig(filename=f'logs/{time.strftime("%Y%m%d")}', encoding='utf-8', level=logging.DEBUG)
+logger = logging.getLogger()
 
 class PromptAlreadyPrompted(Exception):
 	pass
@@ -19,7 +25,9 @@ class Generator:
 		self._prompt = False
 
 	def addMessage(self, role, query):
-		self.messages.append({"role":role, "content":query})
+		message = {"role":role, "content":query}
+		logger.debug(message)
+		self.messages.append(message)
 
 	def promptTopic(self, prompt):
 		if self._prompt:

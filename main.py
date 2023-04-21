@@ -6,8 +6,15 @@ app = flask.Flask(__name__)
 
 gen = Generator()
 
+@app.route('/reset')
+def reset():
+	global gen 
+	gen = Generator()
+	return "<h1>Reset!</h1>"
+
 @app.route('/topic', methods=['GET'])
 def setTopic():
+	reset()
 	topic = flask.request.args.get('topic')
 	if topic: return json.dumps({"response": gen.promptTopic(topic)})
 	return f"{topic} not a topic"

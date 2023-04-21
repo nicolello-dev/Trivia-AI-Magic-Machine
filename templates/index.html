@@ -1,7 +1,8 @@
 <html>
 	<head>
-		<title>Trivia quiz bot</title>
+		<title>Trivia AI Magic Machine</title>
 		<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 	</head>
 	<body>
 		<style>
@@ -10,7 +11,8 @@
 				width: 100%;
 				max-width: 800px;
 				margin: 0px auto;
-				font-family: "Segoe UI", Tahoma, sans-serif;
+				font-family: "Segoe UI", Tahoma, sans-serif !important;
+				font: size; 16px;
 			}
 
 			.input-wrapper {
@@ -27,17 +29,17 @@
 				padding-bottom: 15px;
 				height: auto;
 				min-height: calc(100% - 30px);
-				background-color: gray;
+				background-color: #97cfff;
 			}
 
 			.message {
 				padding: 15px;
 				margin: 10px 15px;
-				background-color: #555;
 				color: white;
 				width: 60%;
 				overflow-wrap: break-word;
 				border-radius: 10px;
+				color: black;
 			}
 
 			.message > * {
@@ -47,13 +49,13 @@
 			.right {
 				margin-right: 15px;
 				margin-left: auto;
-				background-color: #1c1f26;
+				background-color: #66c972;
 			}
 
 			.left {
 				margin-left: 15px;
 				margin-right: auto;
-				background-color: #5c9bfa;
+				background-color: #ffe841;
 			}
 			
 			.input-wrapper {
@@ -71,6 +73,11 @@
 			#message {
 				width: calc(100% - 50px);
 			}
+
+			input {
+				font-size: inherit;
+				font-family: inherit;
+			}
 			
 			button {
 			  height: 30px;
@@ -81,7 +88,27 @@
 				margin: 0px;
 			}
 		</style>
-		<script type='text/javascript'>
+		<div class="content-wrapper">
+			<div id="content">
+				<div class='message left'><p>Hi! Welcome to the Trivia AI Magic Machine</p></div>
+				<div class='message left'><p>Please type a topic in the textbox below to start the quiz!</p></div>
+			</div>
+		</div>
+		<div class="input-wrapper">
+			<input type="text" name="message" id="message" onkeydown='return onKeyPress(event)'/>
+			<button id="submit">
+				❔
+			</button>
+		</div>
+		<script type="text/javascript">
+			function messageHTML(content, u) {
+				if(u){
+					return `<div class='message right'><p>${content}</p></div>`;
+				} else {
+					return `<div class='message left'><p>${content}</p></div>`;
+				}
+			}
+
 			function onKeyPress(e) {
 				var keynum;
 				if(window.event) { // IE                  
@@ -91,28 +118,7 @@
 				}
 				const ENTERKEY = 13;
 				if(keynum == 13) {
-					document.getElementById('submit').onSubmit()
-				}
-			}
-		</script>
-		<div class="content-wrapper">
-			<div id="content">
-				<div class='message left'><h4>Hi! Welcome to the quiz machine!</h4></div>
-				<div class='message left'><h4>Please type a topic in the textbox below to start the quiz!</h4></div>
-			</div>
-		</div>
-		<div class="input-wrapper">
-			<input type="text" name="message" id="message" onkeydown='return onKeyPress(event)'/>
-			<button id="submit">
-				✈
-			</button>
-		</div>
-		<script type="text/javascript">
-			function messageHTML(content, u) {
-				if(u){
-					return `<div class='message right'><p>${content}</p></div>`;
-				} else {
-					return `<div class='message left'><p>${content}</p></div>`;
+					document.getElementById('submit').click()
 				}
 			}
 			
