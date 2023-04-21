@@ -1,0 +1,145 @@
+<html>
+	<head>
+		<title>Trivia quiz bot</title>
+		<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<style>
+			html, body {
+				height: 100%;
+				width: 100%;
+				max-width: 800px;
+				margin: 0px auto;
+				font-family: "Segoe UI", Tahoma, sans-serif;
+			}
+
+			.input-wrapper {
+				height: 70px;
+			}
+			
+			.content-wrapper {
+			  overflow-y: auto;
+			  height: calc(100% - 70px);
+			}
+			
+			.content-wrapper > div {
+				padding-top: 15px;
+				padding-bottom: 15px;
+				height: auto;
+				min-height: calc(100% - 30px);
+				background-color: gray;
+			}
+
+			.message {
+				padding: 15px;
+				margin: 10px 15px;
+				background-color: #555;
+				color: white;
+				width: 60%;
+				overflow-wrap: break-word;
+				border-radius: 10px;
+			}
+
+			.message > * {
+				margin: 0px;
+			}
+
+			.right {
+				margin-right: 15px;
+				margin-left: auto;
+				background-color: #1c1f26;
+			}
+
+			.left {
+				margin-left: 15px;
+				margin-right: auto;
+				background-color: #5c9bfa;
+			}
+			
+			.input-wrapper {
+				width: 60%;
+				height: 50px;
+				padding: 10px;
+				margin: 0px auto;
+			}
+
+			.input-wrapper * {
+				border: 1px solid black;
+				height: 50px;
+			}
+			
+			#message {
+				width: calc(100% - 50px);
+			}
+			
+			button {
+			  height: 30px;
+			  width: 30px;
+			}
+
+			p {
+				margin: 0px;
+			}
+		</style>
+		<script type='text/javascript'>
+			function onKeyPress(e) {
+				var keynum;
+				if(window.event) { // IE                  
+					keynum = e.keyCode;
+				} else if(e.which){ // Netscape/Firefox/Opera                 
+					keynum = e.which;
+				}
+				const ENTERKEY = 13;
+				if(keynum == 13) {
+					document.getElementById('submit').onSubmit()
+				}
+			}
+		</script>
+		<div class="content-wrapper">
+			<div id="content">
+				<div class='message left'><h4>Hi! Welcome to the quiz machine!</h4></div>
+				<div class='message left'><h4>Please type a topic in the textbox below to start the quiz!</h4></div>
+			</div>
+		</div>
+		<div class="input-wrapper">
+			<input type="text" name="message" id="message" onkeydown='return onKeyPress(event)'/>
+			<button id="submit">
+				✈
+			</button>
+		</div>
+		<script type="text/javascript">
+			function messageHTML(content, u) {
+				if(u){
+					return `<div class='message right'><p>${content}</p></div>`;
+				} else {
+					return `<div class='message left'><p>${content}</p></div>`;
+				}
+			}
+			
+			const submit = document.querySelector("#submit");
+			const content = document.querySelector("#content");
+			const message = document.querySelector("#message");
+			
+			let topic = true;
+			submit.addEventListener('click', function () {
+				content.innerHTML += messageHTML(message.value, true);
+				let url = ''
+				if(topic) {
+					url = `https://freddies-quiz-machine-v2.elvisjk.repl.co/topic?topic=${message.value}`;
+					topic = false;
+				} else {
+					url = `https://freddies-quiz-machine-v2.elvisjk.repl.co/question?q=${message.value}`
+				}
+				message.value = '';
+				content.scrollIntoView(false);
+				fetch(url)
+					.then(response => response.json())
+					.then(data => {
+						content.innerHTML += messageHTML(data["response"], false);
+						content.scrollIntoView(false);
+					})
+					.catch(err => console.log(err));
+			});
+		</script>
+	</body>
+</html>

@@ -1,35 +1,26 @@
-import os
-import os
-import openai
-import os
-import sys
-  
-try:
-  openai.api_key = os.environ['OPENAI_API_KEY']
-except KeyError:
-  sys.stderr.write("""
-  Then, open the Secrets Tool and add OPENAI_API_KEY as a secret.
-  """)
-  exit(1)
+import flask
+from utils import Generator
+import json
 
-topic = input("Hi Freddie what trivia quiz topic would you like?\n> ".strip())
+app = flask.Flask(__name__)
 
-messages = [{"role": "system", "content": f"Behavior like a trivia quiz expert generator. I’m going to give you a {topic} and you will give me a trivia question based on that subject. Your style is comedic but you only give factually correct questions and answers. Start by giving me easy questions and make the next question harder, make the difficulty exponentially harder. never tell me the answer in the question block. Encourage me and act as a cheerleader. Wait for me to write the answer before giving me the next one. Only provide one question at a time. Have only questions with one word answer"}]
+gen = Generator()
 
-first = False
-while True:
-  if first:
-    question = input("> ")
-    messages.append({"role": "user", "content": question})
+@app.route('/topic', methods=['GET'])
+def setTopic():
+	topic = flask.request.args.get('topic')
+	if topic: return json.dumps({"response": gen.promptTopic(topic)})
+	return f"{topic} not a topic"
 
-  first = True
+@app.route('/question', methods=['GET'])
+def getQuestion():
+	answer = flask.request.args.get('q')
+	if answer: return json.dumps({"response": gen.generateResponse(answer)})
+	return f"{answer} not an answer"
 
-  response = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo",
-    messages=messages
-  )
+@app.route('/')
+def home():
+	return flask.render_template("index.html")
 
-  content = response['choices'][0]['message']['content'].strip()
-
-  print(f"{content}")
-  messages.append({"role": "assistant", "content": content})
+if __name__ == '__main__':
+	app.run(host="0.0.0.0", port="8080")
