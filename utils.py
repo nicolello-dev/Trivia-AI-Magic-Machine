@@ -18,7 +18,8 @@ class PromptAlreadyPrompted(Exception):
 	pass
 
 class Generator:
-	def __init__(self):
+	def __init__(self, timestamp):
+		self.timestamp = timestamp
 		self._APIKey = os.environ['OPENAI_API_KEY']
 		openai.api_key = self._APIKey
 		self.messages = []
@@ -47,3 +48,9 @@ class Generator:
 		self.addMessage("assistant", res)
 		print(res)
 		return res
+
+def getGenerator(list, time):
+	for elem in list:
+		if elem.timestamp == time:
+			return elem
+	raise Exception

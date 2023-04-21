@@ -101,6 +101,9 @@
 			</button>
 		</div>
 		<script type="text/javascript">
+
+			const start = Date.now();
+			
 			function messageHTML(content, u) {
 				if(u){
 					return `<div class='message right'><p>${content}</p></div>`;
@@ -131,10 +134,10 @@
 				content.innerHTML += messageHTML(message.value, true);
 				let url = ''
 				if(topic) {
-					url = `https://freddies-quiz-machine-v2.elvisjk.repl.co/topic?topic=${message.value}`;
+					url = `https://freddies-quiz-machine-v2.elvisjk.repl.co/topic?time=${start}&topic=${message.value}`;
 					topic = false;
 				} else {
-					url = `https://freddies-quiz-machine-v2.elvisjk.repl.co/question?q=${message.value}`
+					url = `https://freddies-quiz-machine-v2.elvisjk.repl.co/question?time=${start}&q=${message.value}`
 				}
 				message.value = '';
 				content.scrollIntoView(false);
