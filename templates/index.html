@@ -105,6 +105,7 @@
 			const start = Date.now();
 			
 			function messageHTML(content, u) {
+				content = content.replace("\n", "<br/>");
 				if(u){
 					return `<div class='message right'><p>${content}</p></div>`;
 				} else {
@@ -120,7 +121,7 @@
 					keynum = e.which;
 				}
 				const ENTERKEY = 13;
-				if(keynum == 13) {
+				if(keynum == ENTERKEY) {
 					document.getElementById('submit').click()
 				}
 			}
@@ -134,10 +135,10 @@
 				content.innerHTML += messageHTML(message.value, true);
 				let url = ''
 				if(topic) {
-					url = `https://freddies-quiz-machine-v2.elvisjk.repl.co/topic?time=${start}&topic=${message.value}`;
+					url = `https://${window.location.hostname}/topic?time=${start}&topic=${message.value}`;
 					topic = false;
 				} else {
-					url = `https://freddies-quiz-machine-v2.elvisjk.repl.co/question?time=${start}&q=${message.value}`
+					url = `https://${window.location.hostname}/question?time=${start}&q=${message.value}`
 				}
 				message.value = '';
 				content.scrollIntoView(false);
