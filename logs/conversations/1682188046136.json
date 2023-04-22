@@ -1,0 +1,39 @@
+{
+    "timestamp": "1682188046136",
+    "_prompt": true,
+    "country": "United States of America",
+    "messages": [
+        {
+            "role": "system",
+            "content": "For each message I give, generate questions based on the topic Tesla, and give out four possible answers, one of which must be right and the other three must be wrong.\nEach answer should correspond to a letter (A, B, C, D), and the correct answer must be assigned to a different letter each time. Absolutely do not give me the right answer.\nOnly give me one question at a time, and wait for me to respond to give me the next one.\nRepeat this for 10 questions in total, after which you will ask me if I want to play again.\nIncrease the difficulty of the questions as I respond correctly."
+        },
+        {
+            "role": "assistant",
+            "content": "Question 1: In what year was Tesla founded?\nA) 1887\nB) 1987\nC) 1897\nD) 1997"
+        },
+        {
+            "role": "system",
+            "content": "D"
+        },
+        {
+            "role": "assistant",
+            "content": "Correct! Here's your next question:\n\nQuestion 2: What is the name of Tesla's all-electric SUV?\nA) Model Y\nB) Roadster\nC) Model S\nD) Cybertruck"
+        },
+        {
+            "role": "system",
+            "content": "A"
+        },
+        {
+            "role": "assistant",
+            "content": "Great job. Time for the next question:\n\nQuestion 3: What is the range of Tesla's Model 3 Long Range version?\nA) 220 miles\nB) 310 miles\nC) 400 miles\nD) 500 miles"
+        },
+        {
+            "role": "system",
+            "content": "A"
+        },
+        {
+            "role": "assistant",
+            "content": "Incorrect, I'm sorry. The correct answer was B) 310 miles.\n\nQuestion 4: What is Tesla's Autopilot feature?\nA) A fully autonomous driving feature\nB) A human backup driver that takes over in emergencies\nC) A cruise control feature that maintains a steady speed and distance from other vehicles\nD) A feature that allows the car to fly like a drone."
+        }
+    ]
+}

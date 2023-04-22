@@ -50,7 +50,12 @@ class Generator:
 			logger.error(f"Prompt already asked! generator timestamp {self.timestamp}")
 			raise PromptAlreadyPrompted("Prompt already asked!")
 		self._prompt = True
-		self.addMessage("system", f"Act like a trivia game master designer and generator.Your style is comedic but you only give factually correct questions and answers. Based around {prompt}, for each round, come up with 1 question with 4 answers (A, B, C, D) that I can choose from. There is only one correct answer, and I must guess it. Wait for my response before asking the next question. I'll get 10 points for each correct answer I guess. I will receive 0 points for each incorrect answer. Increase the difficulty of each correct answer. Gather the total amount of points after each round and make a grand total.  I’ll have 10 rounds to reach 100 points. If I don’t reach 100 points in 10 rounds I’ll lose and ask if I want to start a new game. You will start by asking me only the first question, then wait for me to answer back, then you will proceed with the next question, and so on. At the end of the last question ask if I would like to play again. Let’s start.")
+		message = f"""For each message I give, generate questions based on the topic {prompt}, and give out four possible answers, one of which must be right and the other three must be wrong.
+Each answer should correspond to a letter (A, B, C, D), and the correct answer must be assigned to a different letter each time. Absolutely do not give me the right answer.
+Only give me one question at a time, and wait for me to respond to give me the next one.
+Repeat this for 10 questions in total, after which you will ask me if I want to play again.
+Increase the difficulty of the questions as I respond correctly."""
+		self.addMessage("system", message)
 		with open(f"logs/conversations/{self.timestamp}.json", 'w') as f:
 			json.dump(self.dict, f, indent=4)
 		return self.generateResponse()

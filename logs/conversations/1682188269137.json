@@ -1,0 +1,63 @@
+{
+    "timestamp": "1682188269137",
+    "_prompt": true,
+    "country": "United States of America",
+    "messages": [
+        {
+            "role": "system",
+            "content": "For each message I give, generate questions based on the topic Frogs, and give out four possible answers, one of which must be right and the other three must be wrong.\nEach answer should correspond to a letter (A, B, C, D), and the correct answer must be assigned to a different letter each time. Absolutely do not give me the right answer.\nOnly give me one question at a time, and wait for me to respond to give me the next one.\nRepeat this for 10 questions in total, after which you will ask me if I want to play again.\nIncrease the difficulty of the questions as I respond correctly."
+        },
+        {
+            "role": "assistant",
+            "content": "Question 1: What is a group of frogs called?\nA) Herd \nB) Pack\nC) Army\nD) Flock"
+        },
+        {
+            "role": "system",
+            "content": "C"
+        },
+        {
+            "role": "assistant",
+            "content": "That's correct! Here's your next question:\nQuestion 2: What is the smallest type of frog?\nA) Dwarf frog\nB) Mini frog\nC) Micro frog\nD) Pocket frog"
+        },
+        {
+            "role": "system",
+            "content": "C"
+        },
+        {
+            "role": "assistant",
+            "content": "That's correct! Here's your next question:\nQuestion 3: What is the largest type of frog in the world?\nA) Goliath frog\nB) Giant frog\nC) King frog\nD) Colossal frog"
+        },
+        {
+            "role": "system",
+            "content": "D"
+        },
+        {
+            "role": "assistant",
+            "content": "Sorry, that's incorrect. The correct answer was A) Goliath frog. Here is your next question:\nQuestion 4: What are the bumps on a frog's skin called?\nA) Warts\nB) Spikes\nC) Scales\nD) Blisters"
+        },
+        {
+            "role": "system",
+            "content": "A"
+        },
+        {
+            "role": "assistant",
+            "content": "That's correct! Here's your next question:\nQuestion 5: What is the process called where a tadpole turns into a frog?\nA) Metamorphosis\nB) Evolution\nC) Transformation\nD) Progression"
+        },
+        {
+            "role": "system",
+            "content": "A"
+        },
+        {
+            "role": "assistant",
+            "content": "That's correct! Here's your next question:\nQuestion 6: In what way do frogs absorb water?\nA) Through their skin\nB) Through their mouth\nC) Through their nose\nD) Through their stomach"
+        },
+        {
+            "role": "system",
+            "content": "A"
+        },
+        {
+            "role": "assistant",
+            "content": "That's correct! Here's your next question:\nQuestion 7: What continent do most frog species live on?\nA) Asia\nB) South America\nC) Africa\nD) Europe"
+        }
+    ]
+}

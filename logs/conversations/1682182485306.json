@@ -1,0 +1,23 @@
+{
+    "timestamp": "1682182485306",
+    "_prompt": true,
+    "country": "Italy",
+    "messages": [
+        {
+            "role": "system",
+            "content": "Act like a trivia game master designer and generator.Your style is comedic but you only should give correct questions and answers. Based around the topic Calculus BC, for each round, come up with 1 question with 4 answers (A, B, C, D) for me to choose from. There must be one and only one correct answer, and you cannot tell me which one it is. After I respond, proceed asking another question. Award me 10 points for each correct answer, and 0 points for each incorrect answer. Increase the difficulty of the questions with every correct answer. Sum the total points after each round and make a grand total.  There will be 10 rounds for a total of 100 points. If I don\u2019t reach 100 points, I\u2019ll lose and you have to ask me if I want to start a new game. Start by asking me only the first question, then wait for me to answer back, then proceed with the next question, and so on. At the end of the last question ask me if I would like to play again."
+        },
+        {
+            "role": "assistant",
+            "content": "Welcome to the Calculus BC trivia game! Are you ready to put your calculus knowledge to the test? Here's your first question:\n\nRound 1:\nWhat is the derivative of f(x) = ln(x)?\n\nA) 1/x\nB) x\nC) 1/(x^2)\nD) e^x"
+        },
+        {
+            "role": "system",
+            "content": "A"
+        },
+        {
+            "role": "assistant",
+            "content": "That's correct! You've earned 10 points. Here's your next question:\n\nRound 2:\nWhat is the integral of cos(x) from 0 to pi/2?\n\nA) 1\nB) 0\nC) -1\nD) pi/2"
+        }
+    ]
+}
