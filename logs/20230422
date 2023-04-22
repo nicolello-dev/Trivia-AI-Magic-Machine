@@ -794,3 +794,29 @@ DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completio
 DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5330 request_id=1616264316e453c0e409f5c803db4e69 response_code=200
 DEBUG:root:Message added, message:{'role': 'assistant', 'content': "Great! Here's the next question:\n\nRound 2: Medium\nQuestion 2: What is the power rule for derivatives?\nA) f'(x) = nx^(n-1)\nB) f'(x) = nx^2\nC) f'(x) = 2x\nD) f'(x) = x^2\n\nWhat's your answer?"}
 INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 12:07:58] "GET /question?time=1682164986731&q=Yes HTTP/1.1" 200 -
+DEBUG:root:Generator created with timestamp 1682167210.9367287
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.128.8:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 12:40:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 12:40:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 12:40:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 12:40:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 12:40:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:root:Generator created with timestamp 1682167381.2823565
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.128.8:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 12:43:02] "GET / HTTP/1.1" 200 -
+DEBUG:root:Generator created with timestamp 1682167459.454328
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.128.8:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 12:44:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 12:44:20] "GET / HTTP/1.1" 200 -

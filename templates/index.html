@@ -12,16 +12,12 @@
 				max-width: 800px;
 				margin: 0px auto;
 				font-family: "Segoe UI", Tahoma, sans-serif !important;
-				font: size; 16px;
-			}
-
-			.input-wrapper {
-				height: 70px;
+				font-size: 16px;
 			}
 			
 			.content-wrapper {
-			  overflow-y: auto;
-			  height: calc(100% - 70px);
+				overflow-y: auto;
+				height: calc(100% - 70px);
 			}
 			
 			.content-wrapper > div {
@@ -63,6 +59,9 @@
 				height: 50px;
 				padding: 10px;
 				margin: 0px auto;
+				display: flex;
+				align-items: center;
+				justify-content: space-around;
 			}
 
 			.input-wrapper * {
@@ -80,8 +79,9 @@
 			}
 			
 			button {
-			  height: 30px;
-			  width: 30px;
+				height: 30px;
+				width: 30px;
+				color: black;
 			}
 
 			p {
@@ -97,7 +97,7 @@
 		<div class="input-wrapper">
 			<input type="text" name="message" id="message" onkeydown='return onKeyPress(event)'/>
 			<button id="submit">
-				❔
+				?
 			</button>
 		</div>
 		<script type="text/javascript">
