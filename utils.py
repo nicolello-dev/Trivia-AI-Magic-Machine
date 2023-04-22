@@ -28,14 +28,16 @@ class Generator:
 		openai.api_key = self._APIKey
 		self.messages = []
 		self._prompt = False
+		self.country = ''
 		logger.debug(f"Generator created with timestamp {timestamp}")
 
 	@property
 	def dict(self):
 		return {
 			"timestamp": self.timestamp,
-			"messages": self.messages,
-			"_prompt": self._prompt
+			"_prompt": self._prompt,
+			"country": self.country,
+			"messages": self.messages
 		}
 
 	def addMessage(self, role, query):
@@ -71,3 +73,6 @@ def getGenerator(list, time):
 		if elem.timestamp == time:
 			return elem
 	raise GeneratorDoesntExist(f"The generator doesn't exist! timestamp given:{time}")
+
+def logLoc(loc):
+	logger.info(f"Request from {loc}")

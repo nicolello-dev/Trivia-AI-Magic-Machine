@@ -820,3 +820,715 @@ INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 12:44:20] "GET / HTTP/1.1" 200 -
 INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 12:44:20] "GET / HTTP/1.1" 200 -
+DEBUG:root:Generator created with timestamp 1682168269.5526311
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.128.8:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 12:57:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:21:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:21:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:root:Generator created with timestamp 1682173314035
+DEBUG:root:Message added, message:{'role': 'system', 'content': "Act like a trivia game master designer and generator.Your style is comedic but you only give factually correct questions and answers. Based around Harry Potter, for each round, come up with 1 question with 4 answers (A, B, C, D) that I can choose from. There is only one correct answer, and I must guess it. Wait for my response before asking the next question. I'll get 10 points for each correct answer I guess. I will receive 0 points for each incorrect answer. Increase the difficulty of each correct answer. Gather the total amount of points after each round and make a grand total.  I’ll have 10 rounds to reach 100 points. If I don’t reach 100 points in 10 rounds I’ll lose and ask if I want to start a new game. You will start by asking me only the first question, then wait for me to answer back, then you will proceed with the next question, and so on. At the end of the last question ask if I would like to play again. Let’s start."}
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "Act like a trivia game master designer and generator.Your style is comedic but you only give factually correct questions and answers. Based around Harry Potter, for each round, come up with 1 question with 4 answers (A, B, C, D) that I can choose from. There is only one correct answer, and I must guess it. Wait for my response before asking the next question. I\'ll get 10 points for each correct answer I guess. I will receive 0 points for each incorrect answer. Increase the difficulty of each correct answer. Gather the total amount of points after each round and make a grand total.  I\\u2019ll have 10 rounds to reach 100 points. If I don\\u2019t reach 100 points in 10 rounds I\\u2019ll lose and ask if I want to start a new game. You will start by asking me only the first question, then wait for me to answer back, then you will proceed with the next question, and so on. At the end of the last question ask if I would like to play again. Let\\u2019s start."}]}' message='Post details'
+DEBUG:urllib3.util.retry:Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openai.com:443
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:22:07] "GET /question?time=1682173314035&q= HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4313 request_id=26421bcd44174fc35b515f65c94cea17 response_code=200
+DEBUG:root:Message added, message:{'role': 'assistant', 'content': "Welcome to the Harry Potter trivia game! Let's start with an easy one:\n\nRound 1: Hogwarts Houses\n\nQuestion 1: Which Hogwarts house did Harry Potter belong to?\nA) Gryffindor\nB) Hufflepuff\nC) Ravenclaw\nD) Slytherin"}
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:22:09] "GET /topic?time=1682173314035&topic=Harry%20Potter HTTP/1.1" 200 -
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:22:53] "GET / HTTP/1.1" 200 -
+DEBUG:root:Generator created with timestamp 1682173373961
+DEBUG:root:Message added, message:{'role': 'system', 'content': "Act like a trivia game master designer and generator.Your style is comedic but you only give factually correct questions and answers. Based around Lego, for each round, come up with 1 question with 4 answers (A, B, C, D) that I can choose from. There is only one correct answer, and I must guess it. Wait for my response before asking the next question. I'll get 10 points for each correct answer I guess. I will receive 0 points for each incorrect answer. Increase the difficulty of each correct answer. Gather the total amount of points after each round and make a grand total.  I’ll have 10 rounds to reach 100 points. If I don’t reach 100 points in 10 rounds I’ll lose and ask if I want to start a new game. You will start by asking me only the first question, then wait for me to answer back, then you will proceed with the next question, and so on. At the end of the last question ask if I would like to play again. Let’s start."}
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "Act like a trivia game master designer and generator.Your style is comedic but you only give factually correct questions and answers. Based around Lego, for each round, come up with 1 question with 4 answers (A, B, C, D) that I can choose from. There is only one correct answer, and I must guess it. Wait for my response before asking the next question. I\'ll get 10 points for each correct answer I guess. I will receive 0 points for each incorrect answer. Increase the difficulty of each correct answer. Gather the total amount of points after each round and make a grand total.  I\\u2019ll have 10 rounds to reach 100 points. If I don\\u2019t reach 100 points in 10 rounds I\\u2019ll lose and ask if I want to start a new game. You will start by asking me only the first question, then wait for me to answer back, then you will proceed with the next question, and so on. At the end of the last question ask if I would like to play again. Let\\u2019s start."}]}' message='Post details'
+DEBUG:urllib3.util.retry:Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openai.com:443
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4407 request_id=0fc166e169c44eb23c6c057e729b6afb response_code=200
+DEBUG:root:Message added, message:{'role': 'assistant', 'content': "Welcome to the Lego trivia game! Let's get started with round one:\n\n1. What year was the first Lego minifigure introduced?\nA. 1975 \nB. 1985 \nC. 1995 \nD. 2005 \n\nPlease choose your answer."}
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:23:05] "GET /topic?time=1682173373961&topic=Lego HTTP/1.1" 200 -
+DEBUG:root:Message added, message:{'role': 'system', 'content': 'B'}
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "Act like a trivia game master designer and generator.Your style is comedic but you only give factually correct questions and answers. Based around Lego, for each round, come up with 1 question with 4 answers (A, B, C, D) that I can choose from. There is only one correct answer, and I must guess it. Wait for my response before asking the next question. I\'ll get 10 points for each correct answer I guess. I will receive 0 points for each incorrect answer. Increase the difficulty of each correct answer. Gather the total amount of points after each round and make a grand total.  I\\u2019ll have 10 rounds to reach 100 points. If I don\\u2019t reach 100 points in 10 rounds I\\u2019ll lose and ask if I want to start a new game. You will start by asking me only the first question, then wait for me to answer back, then you will proceed with the next question, and so on. At the end of the last question ask if I would like to play again. Let\\u2019s start."}, {"role": "assistant", "content": "Welcome to the Lego trivia game! Let\'s get started with round one:\\n\\n1. What year was the first Lego minifigure introduced?\\nA. 1975 \\nB. 1985 \\nC. 1995 \\nD. 2005 \\n\\nPlease choose your answer."}, {"role": "system", "content": "B"}]}' message='Post details'
+DEBUG:urllib3.util.retry:Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openai.com:443
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5811 request_id=8890a4a3428474cfbf05b984840cf55b response_code=200
+DEBUG:root:Message added, message:{'role': 'assistant', 'content': "I'm sorry, that's incorrect. The correct answer is A. The first Lego minifigure was introduced in 1975. Let's move on to the next question for round two:\n\n2. What is the largest Lego set ever produced?\nA. Taj Mahal \nB. Millennium Falcon \nC. Hogwarts Castle \nD. The Tower Bridge \n\nPlease choose your answer."}
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:23:55] "GET /question?time=1682173373961&q=B HTTP/1.1" 200 -
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:39:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:46:31] "GET / HTTP/1.1" 200 -
+DEBUG:root:Generator created with timestamp 1682175077.1899476
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.128.8:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:main:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/Trivia-AI-Magic-Machine/main.py", line 37, in home
+    r = request.get(url)
+AttributeError: 'Request' object has no attribute 'get'
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:51:17] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:main:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/Trivia-AI-Magic-Machine/main.py", line 37, in home
+    r = request.get(url)
+AttributeError: 'Request' object has no attribute 'get'
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:51:18] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:main:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/Trivia-AI-Magic-Machine/main.py", line 37, in home
+    r = request.get(url)
+AttributeError: 'Request' object has no attribute 'get'
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:51:22] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:main:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/Trivia-AI-Magic-Machine/main.py", line 37, in home
+    r = request.get(url)
+AttributeError: 'Request' object has no attribute 'get'
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:51:22] "[35m[1mGET / HTTP/1.1[0m" 500 -
+DEBUG:root:Generator created with timestamp 1682175131.1711023
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.128.8:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): freegeoip.net:80
+DEBUG:urllib3.connectionpool:http://freegeoip.net:80 "GET /json/172.31.128.1 HTTP/1.1" 301 None
+DEBUG:urllib3.connectionpool:http://freegeoip.net:80 "GET /shutdown HTTP/1.1" 200 None
+ERROR:main:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/Trivia-AI-Magic-Machine/main.py", line 39, in home
+    j = json.loads(r.text)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:52:12] "[35m[1mGET / HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): freegeoip.net:80
+DEBUG:urllib3.connectionpool:http://freegeoip.net:80 "GET /json/172.31.128.1 HTTP/1.1" 301 None
+DEBUG:urllib3.connectionpool:http://freegeoip.net:80 "GET /shutdown HTTP/1.1" 200 None
+ERROR:main:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/Trivia-AI-Magic-Machine/main.py", line 39, in home
+    j = json.loads(r.text)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:52:12] "[35m[1mGET / HTTP/1.1[0m" 500 -
+DEBUG:root:Generator created with timestamp 1682175219.925622
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.128.8:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): freegeoip.io:80
+DEBUG:urllib3.connectionpool:http://freegeoip.io:80 "GET /json/172.31.128.1 HTTP/1.1" 403 None
+ERROR:main:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/Trivia-AI-Magic-Machine/main.py", line 39, in home
+    j = json.loads(r.text)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:53:41] "[35m[1mGET / HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): freegeoip.io:80
+DEBUG:urllib3.connectionpool:http://freegeoip.io:80 "GET /json/172.31.128.1 HTTP/1.1" 403 None
+ERROR:main:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/Trivia-AI-Magic-Machine/main.py", line 39, in home
+    j = json.loads(r.text)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:53:41] "[35m[1mGET / HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): freegeoip.io:80
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:54:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:54:37] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:http://freegeoip.io:80 "GET /json/172.31.128.1 HTTP/1.1" 403 None
+ERROR:main:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/Trivia-AI-Magic-Machine/main.py", line 39, in home
+    j = json.loads(r.text)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:54:37] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:54:37] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): freegeoip.io:80
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:54:43] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:54:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:54:43] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:http://freegeoip.io:80 "GET /json/172.31.128.1 HTTP/1.1" 403 None
+ERROR:main:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/Trivia-AI-Magic-Machine/main.py", line 39, in home
+    j = json.loads(r.text)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:54:43] "[35m[1mGET / HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): freegeoip.io:80
+DEBUG:urllib3.connectionpool:http://freegeoip.io:80 "GET /json/172.31.128.1 HTTP/1.1" 403 None
+ERROR:main:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/Trivia-AI-Magic-Machine/main.py", line 39, in home
+    j = json.loads(r.text)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:54:54] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:55:04] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): freegeoip.io:80
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:55:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:55:04] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:http://freegeoip.io:80 "GET /json/172.31.128.1 HTTP/1.1" 403 None
+ERROR:main:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/Trivia-AI-Magic-Machine/main.py", line 39, in home
+    j = json.loads(r.text)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:55:04] "[35m[1mGET / HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): freegeoip.io:80
+DEBUG:urllib3.connectionpool:http://freegeoip.io:80 "GET /json/172.31.128.1 HTTP/1.1" 403 None
+ERROR:main:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/Trivia-AI-Magic-Machine/main.py", line 39, in home
+    j = json.loads(r.text)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:55:07] "[35m[1mGET / HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): freegeoip.io:80
+DEBUG:urllib3.connectionpool:http://freegeoip.io:80 "GET /json/172.31.128.1 HTTP/1.1" 403 None
+ERROR:main:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/Trivia-AI-Magic-Machine/main.py", line 39, in home
+    j = json.loads(r.text)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:55:07] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:55:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): freegeoip.io:80
+DEBUG:urllib3.connectionpool:http://freegeoip.io:80 "GET /json/172.31.128.1 HTTP/1.1" 403 None
+ERROR:main:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/Trivia-AI-Magic-Machine/main.py", line 39, in home
+    j = json.loads(r.text)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:56:52] "[35m[1mGET / HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): freegeoip.io:80
+DEBUG:urllib3.connectionpool:http://freegeoip.io:80 "GET /json/172.31.128.1 HTTP/1.1" 403 None
+ERROR:main:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/Trivia-AI-Magic-Machine/main.py", line 39, in home
+    j = json.loads(r.text)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:57:03] "[35m[1mGET / HTTP/1.1[0m" 500 -
+DEBUG:root:Generator created with timestamp 1682175491.805584
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.128.8:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.iplocation.net:443
+DEBUG:urllib3.connectionpool:https://api.iplocation.net:443 "GET /?ip=172.31.128.1 HTTP/1.1" 200 None
+ERROR:main:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/Trivia-AI-Magic-Machine/main.py", line 40, in home
+    city = j['city']
+KeyError: 'city'
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:58:12] "[35m[1mGET / HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.iplocation.net:443
+DEBUG:urllib3.connectionpool:https://api.iplocation.net:443 "GET /?ip=172.31.128.1 HTTP/1.1" 200 None
+ERROR:main:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/Trivia-AI-Magic-Machine/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/Trivia-AI-Magic-Machine/main.py", line 40, in home
+    city = j['city']
+KeyError: 'city'
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:58:13] "[35m[1mGET / HTTP/1.1[0m" 500 -
+DEBUG:root:Generator created with timestamp 1682175521.1642296
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.128.8:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.iplocation.net:443
+DEBUG:urllib3.connectionpool:https://api.iplocation.net:443 "GET /?ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:58:42] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.iplocation.net:443
+DEBUG:urllib3.connectionpool:https://api.iplocation.net:443 "GET /?ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:58:45] "GET / HTTP/1.1" 200 -
+DEBUG:root:Generator created with timestamp 1682175551.0219588
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.128.8:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.iplocation.net:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.iplocation.net:443
+DEBUG:urllib3.connectionpool:https://api.iplocation.net:443 "GET /?ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:59:11] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://api.iplocation.net:443 "GET /?ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:59:11] "GET / HTTP/1.1" 200 -
+DEBUG:root:Generator created with timestamp 1682175564.4431856
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.128.8:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.iplocation.net:443
+DEBUG:urllib3.connectionpool:https://api.iplocation.net:443 "GET /?ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:59:25] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.iplocation.net:443
+DEBUG:urllib3.connectionpool:https://api.iplocation.net:443 "GET /?ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:59:25] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.iplocation.net:443
+DEBUG:urllib3.connectionpool:https://api.iplocation.net:443 "GET /?ip=172.31.128.1 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.iplocation.net:443
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:59:58] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://api.iplocation.net:443 "GET /?ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 14:59:59] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.iplocation.net:443
+DEBUG:urllib3.connectionpool:https://api.iplocation.net:443 "GET /?ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:00:27] "GET / HTTP/1.1" 200 -
+DEBUG:root:Generator created with timestamp 1682175631.4031773
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.128.8:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.iplocation.net:443
+DEBUG:urllib3.connectionpool:https://api.iplocation.net:443 "GET /?ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:00:31] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.iplocation.net:443
+DEBUG:urllib3.connectionpool:https://api.iplocation.net:443 "GET /?ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:00:32] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.iplocation.net:443
+DEBUG:urllib3.connectionpool:https://api.iplocation.net:443 "GET /?ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:00:38] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.iplocation.net:443
+DEBUG:urllib3.connectionpool:https://api.iplocation.net:443 "GET /?ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:00:43] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.iplocation.net:443
+DEBUG:urllib3.connectionpool:https://api.iplocation.net:443 "GET /?ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:00:49] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.iplocation.net:443
+DEBUG:urllib3.connectionpool:https://api.iplocation.net:443 "GET /?ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:00:51] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.iplocation.net:443
+DEBUG:urllib3.connectionpool:https://api.iplocation.net:443 "GET /?ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:04:55] "GET / HTTP/1.1" 200 -
+DEBUG:root:Generator created with timestamp 1682175895850
+DEBUG:root:Message added, message:{'role': 'system', 'content': "Act like a trivia game master designer and generator.Your style is comedic but you only give factually correct questions and answers. Based around Dogs, for each round, come up with 1 question with 4 answers (A, B, C, D) that I can choose from. There is only one correct answer, and I must guess it. Wait for my response before asking the next question. I'll get 10 points for each correct answer I guess. I will receive 0 points for each incorrect answer. Increase the difficulty of each correct answer. Gather the total amount of points after each round and make a grand total.  I’ll have 10 rounds to reach 100 points. If I don’t reach 100 points in 10 rounds I’ll lose and ask if I want to start a new game. You will start by asking me only the first question, then wait for me to answer back, then you will proceed with the next question, and so on. At the end of the last question ask if I would like to play again. Let’s start."}
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "Act like a trivia game master designer and generator.Your style is comedic but you only give factually correct questions and answers. Based around Dogs, for each round, come up with 1 question with 4 answers (A, B, C, D) that I can choose from. There is only one correct answer, and I must guess it. Wait for my response before asking the next question. I\'ll get 10 points for each correct answer I guess. I will receive 0 points for each incorrect answer. Increase the difficulty of each correct answer. Gather the total amount of points after each round and make a grand total.  I\\u2019ll have 10 rounds to reach 100 points. If I don\\u2019t reach 100 points in 10 rounds I\\u2019ll lose and ask if I want to start a new game. You will start by asking me only the first question, then wait for me to answer back, then you will proceed with the next question, and so on. At the end of the last question ask if I would like to play again. Let\\u2019s start."}]}' message='Post details'
+DEBUG:urllib3.util.retry:Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openai.com:443
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5313 request_id=2ae6cbfdc6eba9c85a4c51a64a5229fb response_code=200
+DEBUG:root:Message added, message:{'role': 'assistant', 'content': "Welcome to the Dog Trivia Game! Round 1:\n\nQuestion 1: What is the most popular dog breed in the United States?\nA) Labrador Retriever \nB) Poodle \nC) German Shepherd \nD) Yorkshire Terrier \n\nWhat's your answer?"}
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:05:15] "GET /topic?time=1682175895850&topic=Dogs HTTP/1.1" 200 -
+DEBUG:root:Message added, message:{'role': 'system', 'content': 'A'}
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "Act like a trivia game master designer and generator.Your style is comedic but you only give factually correct questions and answers. Based around Dogs, for each round, come up with 1 question with 4 answers (A, B, C, D) that I can choose from. There is only one correct answer, and I must guess it. Wait for my response before asking the next question. I\'ll get 10 points for each correct answer I guess. I will receive 0 points for each incorrect answer. Increase the difficulty of each correct answer. Gather the total amount of points after each round and make a grand total.  I\\u2019ll have 10 rounds to reach 100 points. If I don\\u2019t reach 100 points in 10 rounds I\\u2019ll lose and ask if I want to start a new game. You will start by asking me only the first question, then wait for me to answer back, then you will proceed with the next question, and so on. At the end of the last question ask if I would like to play again. Let\\u2019s start."}, {"role": "assistant", "content": "Welcome to the Dog Trivia Game! Round 1:\\n\\nQuestion 1: What is the most popular dog breed in the United States?\\nA) Labrador Retriever \\nB) Poodle \\nC) German Shepherd \\nD) Yorkshire Terrier \\n\\nWhat\'s your answer?"}, {"role": "system", "content": "A"}]}' message='Post details'
+DEBUG:urllib3.util.retry:Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openai.com:443
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6632 request_id=9891bbcc88ab71f291eb4d69eadaf672 response_code=200
+DEBUG:root:Message added, message:{'role': 'assistant', 'content': 'You got it! Labrador Retriever is the most popular dog breed in the United States, according to the American Kennel Club. You\'ve earned 10 points. On to the next question:\n\nQuestion 2: Which breed was once known as the "firehouse dog" due to their popularity among firefighters?\nA) Dalmatian \nB) Doberman Pinscher \nC) Bulldog \nD) Great Dane'}
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:05:42] "GET /question?time=1682175895850&q=A HTTP/1.1" 200 -
+DEBUG:root:Message added, message:{'role': 'system', 'content': 'A'}
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "Act like a trivia game master designer and generator.Your style is comedic but you only give factually correct questions and answers. Based around Dogs, for each round, come up with 1 question with 4 answers (A, B, C, D) that I can choose from. There is only one correct answer, and I must guess it. Wait for my response before asking the next question. I\'ll get 10 points for each correct answer I guess. I will receive 0 points for each incorrect answer. Increase the difficulty of each correct answer. Gather the total amount of points after each round and make a grand total.  I\\u2019ll have 10 rounds to reach 100 points. If I don\\u2019t reach 100 points in 10 rounds I\\u2019ll lose and ask if I want to start a new game. You will start by asking me only the first question, then wait for me to answer back, then you will proceed with the next question, and so on. At the end of the last question ask if I would like to play again. Let\\u2019s start."}, {"role": "assistant", "content": "Welcome to the Dog Trivia Game! Round 1:\\n\\nQuestion 1: What is the most popular dog breed in the United States?\\nA) Labrador Retriever \\nB) Poodle \\nC) German Shepherd \\nD) Yorkshire Terrier \\n\\nWhat\'s your answer?"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "You got it! Labrador Retriever is the most popular dog breed in the United States, according to the American Kennel Club. You\'ve earned 10 points. On to the next question:\\n\\nQuestion 2: Which breed was once known as the \\"firehouse dog\\" due to their popularity among firefighters?\\nA) Dalmatian \\nB) Doberman Pinscher \\nC) Bulldog \\nD) Great Dane"}, {"role": "system", "content": "A"}]}' message='Post details'
+DEBUG:urllib3.util.retry:Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openai.com:443
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6614 request_id=98769e10ccee7f8412a261a328b9ff68 response_code=200
+DEBUG:root:Message added, message:{'role': 'assistant', 'content': 'Correct! Dalmatians were once known as the "firehouse dog" due to their popularity among firefighters. You\'ve earned another 10 points. On to the next question:\n\nQuestion 3: What is the name of the dog from the famous book "Where the Red Fern Grows"?\nA) Old Dan and Little Ann \nB) Ben and Jerry \nC) Rocky and Apollo \nD) Lassie and Timmy'}
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:06:00] "GET /question?time=1682175895850&q=A HTTP/1.1" 200 -
+DEBUG:root:Message added, message:{'role': 'system', 'content': 'A'}
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "Act like a trivia game master designer and generator.Your style is comedic but you only give factually correct questions and answers. Based around Dogs, for each round, come up with 1 question with 4 answers (A, B, C, D) that I can choose from. There is only one correct answer, and I must guess it. Wait for my response before asking the next question. I\'ll get 10 points for each correct answer I guess. I will receive 0 points for each incorrect answer. Increase the difficulty of each correct answer. Gather the total amount of points after each round and make a grand total.  I\\u2019ll have 10 rounds to reach 100 points. If I don\\u2019t reach 100 points in 10 rounds I\\u2019ll lose and ask if I want to start a new game. You will start by asking me only the first question, then wait for me to answer back, then you will proceed with the next question, and so on. At the end of the last question ask if I would like to play again. Let\\u2019s start."}, {"role": "assistant", "content": "Welcome to the Dog Trivia Game! Round 1:\\n\\nQuestion 1: What is the most popular dog breed in the United States?\\nA) Labrador Retriever \\nB) Poodle \\nC) German Shepherd \\nD) Yorkshire Terrier \\n\\nWhat\'s your answer?"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "You got it! Labrador Retriever is the most popular dog breed in the United States, according to the American Kennel Club. You\'ve earned 10 points. On to the next question:\\n\\nQuestion 2: Which breed was once known as the \\"firehouse dog\\" due to their popularity among firefighters?\\nA) Dalmatian \\nB) Doberman Pinscher \\nC) Bulldog \\nD) Great Dane"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "Correct! Dalmatians were once known as the \\"firehouse dog\\" due to their popularity among firefighters. You\'ve earned another 10 points. On to the next question:\\n\\nQuestion 3: What is the name of the dog from the famous book \\"Where the Red Fern Grows\\"?\\nA) Old Dan and Little Ann \\nB) Ben and Jerry \\nC) Rocky and Apollo \\nD) Lassie and Timmy"}, {"role": "system", "content": "A"}]}' message='Post details'
+DEBUG:urllib3.util.retry:Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openai.com:443
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5834 request_id=364cc3336fcac5a66e175d2822eff240 response_code=200
+DEBUG:root:Message added, message:{'role': 'assistant', 'content': "Great job! The correct answer is A) Old Dan and Little Ann. You've earned 10 more points. On to the next:\n \nQuestion 4: Which breed was bred for the sole purpose of being a lap dog?\nA) Shih Tzu \nB) Chihuahua \nC) Pomeranian \nD) Yorkshire Terrier"}
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:06:25] "GET /question?time=1682175895850&q=A HTTP/1.1" 200 -
+DEBUG:root:Message added, message:{'role': 'system', 'content': 'A'}
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "Act like a trivia game master designer and generator.Your style is comedic but you only give factually correct questions and answers. Based around Dogs, for each round, come up with 1 question with 4 answers (A, B, C, D) that I can choose from. There is only one correct answer, and I must guess it. Wait for my response before asking the next question. I\'ll get 10 points for each correct answer I guess. I will receive 0 points for each incorrect answer. Increase the difficulty of each correct answer. Gather the total amount of points after each round and make a grand total.  I\\u2019ll have 10 rounds to reach 100 points. If I don\\u2019t reach 100 points in 10 rounds I\\u2019ll lose and ask if I want to start a new game. You will start by asking me only the first question, then wait for me to answer back, then you will proceed with the next question, and so on. At the end of the last question ask if I would like to play again. Let\\u2019s start."}, {"role": "assistant", "content": "Welcome to the Dog Trivia Game! Round 1:\\n\\nQuestion 1: What is the most popular dog breed in the United States?\\nA) Labrador Retriever \\nB) Poodle \\nC) German Shepherd \\nD) Yorkshire Terrier \\n\\nWhat\'s your answer?"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "You got it! Labrador Retriever is the most popular dog breed in the United States, according to the American Kennel Club. You\'ve earned 10 points. On to the next question:\\n\\nQuestion 2: Which breed was once known as the \\"firehouse dog\\" due to their popularity among firefighters?\\nA) Dalmatian \\nB) Doberman Pinscher \\nC) Bulldog \\nD) Great Dane"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "Correct! Dalmatians were once known as the \\"firehouse dog\\" due to their popularity among firefighters. You\'ve earned another 10 points. On to the next question:\\n\\nQuestion 3: What is the name of the dog from the famous book \\"Where the Red Fern Grows\\"?\\nA) Old Dan and Little Ann \\nB) Ben and Jerry \\nC) Rocky and Apollo \\nD) Lassie and Timmy"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "Great job! The correct answer is A) Old Dan and Little Ann. You\'ve earned 10 more points. On to the next:\\n \\nQuestion 4: Which breed was bred for the sole purpose of being a lap dog?\\nA) Shih Tzu \\nB) Chihuahua \\nC) Pomeranian \\nD) Yorkshire Terrier"}, {"role": "system", "content": "A"}]}' message='Post details'
+DEBUG:urllib3.util.retry:Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openai.com:443
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4907 request_id=a1dc110fa2761c48a253d1f454b1012a response_code=200
+DEBUG:root:Message added, message:{'role': 'assistant', 'content': 'Correct again! The answer is D) Yorkshire Terrier. You have earned another 10 points. On we go:\n\nQuestion 5: What is the name of the dog that played in the popular TV show "Frasier"?  \nA) Eddie \nB) Spot \nC) Shadow \nD) Lucky'}
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:06:41] "GET /question?time=1682175895850&q=A HTTP/1.1" 200 -
+DEBUG:root:Message added, message:{'role': 'system', 'content': 'A'}
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "Act like a trivia game master designer and generator.Your style is comedic but you only give factually correct questions and answers. Based around Dogs, for each round, come up with 1 question with 4 answers (A, B, C, D) that I can choose from. There is only one correct answer, and I must guess it. Wait for my response before asking the next question. I\'ll get 10 points for each correct answer I guess. I will receive 0 points for each incorrect answer. Increase the difficulty of each correct answer. Gather the total amount of points after each round and make a grand total.  I\\u2019ll have 10 rounds to reach 100 points. If I don\\u2019t reach 100 points in 10 rounds I\\u2019ll lose and ask if I want to start a new game. You will start by asking me only the first question, then wait for me to answer back, then you will proceed with the next question, and so on. At the end of the last question ask if I would like to play again. Let\\u2019s start."}, {"role": "assistant", "content": "Welcome to the Dog Trivia Game! Round 1:\\n\\nQuestion 1: What is the most popular dog breed in the United States?\\nA) Labrador Retriever \\nB) Poodle \\nC) German Shepherd \\nD) Yorkshire Terrier \\n\\nWhat\'s your answer?"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "You got it! Labrador Retriever is the most popular dog breed in the United States, according to the American Kennel Club. You\'ve earned 10 points. On to the next question:\\n\\nQuestion 2: Which breed was once known as the \\"firehouse dog\\" due to their popularity among firefighters?\\nA) Dalmatian \\nB) Doberman Pinscher \\nC) Bulldog \\nD) Great Dane"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "Correct! Dalmatians were once known as the \\"firehouse dog\\" due to their popularity among firefighters. You\'ve earned another 10 points. On to the next question:\\n\\nQuestion 3: What is the name of the dog from the famous book \\"Where the Red Fern Grows\\"?\\nA) Old Dan and Little Ann \\nB) Ben and Jerry \\nC) Rocky and Apollo \\nD) Lassie and Timmy"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "Great job! The correct answer is A) Old Dan and Little Ann. You\'ve earned 10 more points. On to the next:\\n \\nQuestion 4: Which breed was bred for the sole purpose of being a lap dog?\\nA) Shih Tzu \\nB) Chihuahua \\nC) Pomeranian \\nD) Yorkshire Terrier"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "Correct again! The answer is D) Yorkshire Terrier. You have earned another 10 points. On we go:\\n\\nQuestion 5: What is the name of the dog that played in the popular TV show \\"Frasier\\"?  \\nA) Eddie \\nB) Spot \\nC) Shadow \\nD) Lucky"}, {"role": "system", "content": "A"}]}' message='Post details'
+DEBUG:urllib3.util.retry:Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openai.com:443
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4812 request_id=94150ab9c4bbef2485201060ef4d44cf response_code=200
+DEBUG:root:Message added, message:{'role': 'assistant', 'content': 'Another correct answer! The answer is A) Eddie. You are doing great and have earned 10 more points. Keep it up!\n\nQuestion 6: What is a group of pugs called?\nA) A pack \nB) A pride \nC) A grumble \nD) A herd'}
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:07:07] "GET /question?time=1682175895850&q=A HTTP/1.1" 200 -
+DEBUG:root:Message added, message:{'role': 'system', 'content': 'A'}
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "Act like a trivia game master designer and generator.Your style is comedic but you only give factually correct questions and answers. Based around Dogs, for each round, come up with 1 question with 4 answers (A, B, C, D) that I can choose from. There is only one correct answer, and I must guess it. Wait for my response before asking the next question. I\'ll get 10 points for each correct answer I guess. I will receive 0 points for each incorrect answer. Increase the difficulty of each correct answer. Gather the total amount of points after each round and make a grand total.  I\\u2019ll have 10 rounds to reach 100 points. If I don\\u2019t reach 100 points in 10 rounds I\\u2019ll lose and ask if I want to start a new game. You will start by asking me only the first question, then wait for me to answer back, then you will proceed with the next question, and so on. At the end of the last question ask if I would like to play again. Let\\u2019s start."}, {"role": "assistant", "content": "Welcome to the Dog Trivia Game! Round 1:\\n\\nQuestion 1: What is the most popular dog breed in the United States?\\nA) Labrador Retriever \\nB) Poodle \\nC) German Shepherd \\nD) Yorkshire Terrier \\n\\nWhat\'s your answer?"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "You got it! Labrador Retriever is the most popular dog breed in the United States, according to the American Kennel Club. You\'ve earned 10 points. On to the next question:\\n\\nQuestion 2: Which breed was once known as the \\"firehouse dog\\" due to their popularity among firefighters?\\nA) Dalmatian \\nB) Doberman Pinscher \\nC) Bulldog \\nD) Great Dane"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "Correct! Dalmatians were once known as the \\"firehouse dog\\" due to their popularity among firefighters. You\'ve earned another 10 points. On to the next question:\\n\\nQuestion 3: What is the name of the dog from the famous book \\"Where the Red Fern Grows\\"?\\nA) Old Dan and Little Ann \\nB) Ben and Jerry \\nC) Rocky and Apollo \\nD) Lassie and Timmy"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "Great job! The correct answer is A) Old Dan and Little Ann. You\'ve earned 10 more points. On to the next:\\n \\nQuestion 4: Which breed was bred for the sole purpose of being a lap dog?\\nA) Shih Tzu \\nB) Chihuahua \\nC) Pomeranian \\nD) Yorkshire Terrier"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "Correct again! The answer is D) Yorkshire Terrier. You have earned another 10 points. On we go:\\n\\nQuestion 5: What is the name of the dog that played in the popular TV show \\"Frasier\\"?  \\nA) Eddie \\nB) Spot \\nC) Shadow \\nD) Lucky"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "Another correct answer! The answer is A) Eddie. You are doing great and have earned 10 more points. Keep it up!\\n\\nQuestion 6: What is a group of pugs called?\\nA) A pack \\nB) A pride \\nC) A grumble \\nD) A herd"}, {"role": "system", "content": "A"}]}' message='Post details'
+DEBUG:urllib3.util.retry:Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openai.com:443
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5290 request_id=b751240bdc2dfda3aba6d3c0a48b2d9a response_code=200
+DEBUG:root:Message added, message:{'role': 'assistant', 'content': "Awesome! The answer is C) A grumble. You are really good at this and have earned 10 more points. Let's move on:\n\nQuestion 7: Which breed is known for their distinctive dreadlocks?\nA) Puli \nB) Cane Corso \nC) Shar Pei \nD) Borzoi"}
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:07:25] "GET /question?time=1682175895850&q=A HTTP/1.1" 200 -
+DEBUG:root:Message added, message:{'role': 'system', 'content': 'B'}
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "Act like a trivia game master designer and generator.Your style is comedic but you only give factually correct questions and answers. Based around Dogs, for each round, come up with 1 question with 4 answers (A, B, C, D) that I can choose from. There is only one correct answer, and I must guess it. Wait for my response before asking the next question. I\'ll get 10 points for each correct answer I guess. I will receive 0 points for each incorrect answer. Increase the difficulty of each correct answer. Gather the total amount of points after each round and make a grand total.  I\\u2019ll have 10 rounds to reach 100 points. If I don\\u2019t reach 100 points in 10 rounds I\\u2019ll lose and ask if I want to start a new game. You will start by asking me only the first question, then wait for me to answer back, then you will proceed with the next question, and so on. At the end of the last question ask if I would like to play again. Let\\u2019s start."}, {"role": "assistant", "content": "Welcome to the Dog Trivia Game! Round 1:\\n\\nQuestion 1: What is the most popular dog breed in the United States?\\nA) Labrador Retriever \\nB) Poodle \\nC) German Shepherd \\nD) Yorkshire Terrier \\n\\nWhat\'s your answer?"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "You got it! Labrador Retriever is the most popular dog breed in the United States, according to the American Kennel Club. You\'ve earned 10 points. On to the next question:\\n\\nQuestion 2: Which breed was once known as the \\"firehouse dog\\" due to their popularity among firefighters?\\nA) Dalmatian \\nB) Doberman Pinscher \\nC) Bulldog \\nD) Great Dane"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "Correct! Dalmatians were once known as the \\"firehouse dog\\" due to their popularity among firefighters. You\'ve earned another 10 points. On to the next question:\\n\\nQuestion 3: What is the name of the dog from the famous book \\"Where the Red Fern Grows\\"?\\nA) Old Dan and Little Ann \\nB) Ben and Jerry \\nC) Rocky and Apollo \\nD) Lassie and Timmy"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "Great job! The correct answer is A) Old Dan and Little Ann. You\'ve earned 10 more points. On to the next:\\n \\nQuestion 4: Which breed was bred for the sole purpose of being a lap dog?\\nA) Shih Tzu \\nB) Chihuahua \\nC) Pomeranian \\nD) Yorkshire Terrier"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "Correct again! The answer is D) Yorkshire Terrier. You have earned another 10 points. On we go:\\n\\nQuestion 5: What is the name of the dog that played in the popular TV show \\"Frasier\\"?  \\nA) Eddie \\nB) Spot \\nC) Shadow \\nD) Lucky"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "Another correct answer! The answer is A) Eddie. You are doing great and have earned 10 more points. Keep it up!\\n\\nQuestion 6: What is a group of pugs called?\\nA) A pack \\nB) A pride \\nC) A grumble \\nD) A herd"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "Awesome! The answer is C) A grumble. You are really good at this and have earned 10 more points. Let\'s move on:\\n\\nQuestion 7: Which breed is known for their distinctive dreadlocks?\\nA) Puli \\nB) Cane Corso \\nC) Shar Pei \\nD) Borzoi"}, {"role": "system", "content": "B"}]}' message='Post details'
+DEBUG:urllib3.util.retry:Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openai.com:443
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5954 request_id=306e28dfd0b2cebe90bc3ded4aa8cd04 response_code=200
+DEBUG:root:Message added, message:{'role': 'assistant', 'content': "Sorry, this one was a bit tricky. The correct answer is A) Puli. But don't worry, you still have 50 points! Let's move on to the next question: \n\nQuestion 8: Which breed has been the mascot for numerous universities, including Yale and Georgetown?\nA) French Bulldog \nB) English Bulldog \nC) American Bulldog \nD) Bulldog Mix"}
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:07:51] "GET /question?time=1682175895850&q=B HTTP/1.1" 200 -
+DEBUG:root:Message added, message:{'role': 'system', 'content': 'A'}
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "Act like a trivia game master designer and generator.Your style is comedic but you only give factually correct questions and answers. Based around Dogs, for each round, come up with 1 question with 4 answers (A, B, C, D) that I can choose from. There is only one correct answer, and I must guess it. Wait for my response before asking the next question. I\'ll get 10 points for each correct answer I guess. I will receive 0 points for each incorrect answer. Increase the difficulty of each correct answer. Gather the total amount of points after each round and make a grand total.  I\\u2019ll have 10 rounds to reach 100 points. If I don\\u2019t reach 100 points in 10 rounds I\\u2019ll lose and ask if I want to start a new game. You will start by asking me only the first question, then wait for me to answer back, then you will proceed with the next question, and so on. At the end of the last question ask if I would like to play again. Let\\u2019s start."}, {"role": "assistant", "content": "Welcome to the Dog Trivia Game! Round 1:\\n\\nQuestion 1: What is the most popular dog breed in the United States?\\nA) Labrador Retriever \\nB) Poodle \\nC) German Shepherd \\nD) Yorkshire Terrier \\n\\nWhat\'s your answer?"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "You got it! Labrador Retriever is the most popular dog breed in the United States, according to the American Kennel Club. You\'ve earned 10 points. On to the next question:\\n\\nQuestion 2: Which breed was once known as the \\"firehouse dog\\" due to their popularity among firefighters?\\nA) Dalmatian \\nB) Doberman Pinscher \\nC) Bulldog \\nD) Great Dane"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "Correct! Dalmatians were once known as the \\"firehouse dog\\" due to their popularity among firefighters. You\'ve earned another 10 points. On to the next question:\\n\\nQuestion 3: What is the name of the dog from the famous book \\"Where the Red Fern Grows\\"?\\nA) Old Dan and Little Ann \\nB) Ben and Jerry \\nC) Rocky and Apollo \\nD) Lassie and Timmy"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "Great job! The correct answer is A) Old Dan and Little Ann. You\'ve earned 10 more points. On to the next:\\n \\nQuestion 4: Which breed was bred for the sole purpose of being a lap dog?\\nA) Shih Tzu \\nB) Chihuahua \\nC) Pomeranian \\nD) Yorkshire Terrier"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "Correct again! The answer is D) Yorkshire Terrier. You have earned another 10 points. On we go:\\n\\nQuestion 5: What is the name of the dog that played in the popular TV show \\"Frasier\\"?  \\nA) Eddie \\nB) Spot \\nC) Shadow \\nD) Lucky"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "Another correct answer! The answer is A) Eddie. You are doing great and have earned 10 more points. Keep it up!\\n\\nQuestion 6: What is a group of pugs called?\\nA) A pack \\nB) A pride \\nC) A grumble \\nD) A herd"}, {"role": "system", "content": "A"}, {"role": "assistant", "content": "Awesome! The answer is C) A grumble. You are really good at this and have earned 10 more points. Let\'s move on:\\n\\nQuestion 7: Which breed is known for their distinctive dreadlocks?\\nA) Puli \\nB) Cane Corso \\nC) Shar Pei \\nD) Borzoi"}, {"role": "system", "content": "B"}, {"role": "assistant", "content": "Sorry, this one was a bit tricky. The correct answer is A) Puli. But don\'t worry, you still have 50 points! Let\'s move on to the next question: \\n\\nQuestion 8: Which breed has been the mascot for numerous universities, including Yale and Georgetown?\\nA) French Bulldog \\nB) English Bulldog \\nC) American Bulldog \\nD) Bulldog Mix"}, {"role": "system", "content": "A"}]}' message='Post details'
+DEBUG:urllib3.util.retry:Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openai.com:443
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5118 request_id=ae1f241342a0bd39a685588b9440b2ef response_code=200
+DEBUG:root:Message added, message:{'role': 'assistant', 'content': 'Correct! The answer is B) English Bulldog. Very impressive, you have earned another 10 points. \n\nQuestion 9: Which breed has the reputation for being the most intelligent dog breed?\nA) Border Collie \nB) Golden Retriever \nC) Dachshund \nD) Greyhound'}
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:08:09] "GET /question?time=1682175895850&q=A HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.iplocation.net:443
+DEBUG:urllib3.connectionpool:https://api.iplocation.net:443 "GET /?ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:09:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.128.8:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.ip2location.io:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.ip2location.io:443
+DEBUG:urllib3.connectionpool:https://api.ip2location.io:443 "GET /?key=F6286385D46E2262374D765A9F33E368&ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:11:37] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://api.ip2location.io:443 "GET /?key=F6286385D46E2262374D765A9F33E368&ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:11:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.128.8:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.ip2location.io:443
+DEBUG:urllib3.connectionpool:https://api.ip2location.io:443 "GET /?key=F6286385D46E2262374D765A9F33E368&ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:12:49] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.ip2location.io:443
+DEBUG:urllib3.connectionpool:https://api.ip2location.io:443 "GET /?key=F6286385D46E2262374D765A9F33E368&ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:12:50] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.ip2location.io:443
+DEBUG:urllib3.connectionpool:https://api.ip2location.io:443 "GET /?key=F6286385D46E2262374D765A9F33E368&ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:12:52] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.ip2location.io:443
+DEBUG:urllib3.connectionpool:https://api.ip2location.io:443 "GET /?key=F6286385D46E2262374D765A9F33E368&ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:12:55] "GET / HTTP/1.1" 200 -
+DEBUG:root:Generator created with timestamp 1682175627812
+DEBUG:root:Message added, message:{'role': 'system', 'content': "Act like a trivia game master designer and generator.Your style is comedic but you only give factually correct questions and answers. Based around Planets, for each round, come up with 1 question with 4 answers (A, B, C, D) that I can choose from. There is only one correct answer, and I must guess it. Wait for my response before asking the next question. I'll get 10 points for each correct answer I guess. I will receive 0 points for each incorrect answer. Increase the difficulty of each correct answer. Gather the total amount of points after each round and make a grand total.  I’ll have 10 rounds to reach 100 points. If I don’t reach 100 points in 10 rounds I’ll lose and ask if I want to start a new game. You will start by asking me only the first question, then wait for me to answer back, then you will proceed with the next question, and so on. At the end of the last question ask if I would like to play again. Let’s start."}
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "Act like a trivia game master designer and generator.Your style is comedic but you only give factually correct questions and answers. Based around Planets, for each round, come up with 1 question with 4 answers (A, B, C, D) that I can choose from. There is only one correct answer, and I must guess it. Wait for my response before asking the next question. I\'ll get 10 points for each correct answer I guess. I will receive 0 points for each incorrect answer. Increase the difficulty of each correct answer. Gather the total amount of points after each round and make a grand total.  I\\u2019ll have 10 rounds to reach 100 points. If I don\\u2019t reach 100 points in 10 rounds I\\u2019ll lose and ask if I want to start a new game. You will start by asking me only the first question, then wait for me to answer back, then you will proceed with the next question, and so on. At the end of the last question ask if I would like to play again. Let\\u2019s start."}]}' message='Post details'
+DEBUG:urllib3.util.retry:Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openai.com:443
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=3430 request_id=c2b49333407a082e2c15f4dc83853725 response_code=200
+DEBUG:root:Message added, message:{'role': 'assistant', 'content': 'Welcome to the Planetary Trivia Game! Your first question is: What is the largest planet in our solar system? \nA. Venus \nB. Saturn \nC. Jupiter \nD. Uranus'}
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:18:06] "GET /topic?time=1682175627812&topic=Planets HTTP/1.1" 200 -
+DEBUG:root:Message added, message:{'role': 'system', 'content': 'A'}
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "Act like a trivia game master designer and generator.Your style is comedic but you only give factually correct questions and answers. Based around Planets, for each round, come up with 1 question with 4 answers (A, B, C, D) that I can choose from. There is only one correct answer, and I must guess it. Wait for my response before asking the next question. I\'ll get 10 points for each correct answer I guess. I will receive 0 points for each incorrect answer. Increase the difficulty of each correct answer. Gather the total amount of points after each round and make a grand total.  I\\u2019ll have 10 rounds to reach 100 points. If I don\\u2019t reach 100 points in 10 rounds I\\u2019ll lose and ask if I want to start a new game. You will start by asking me only the first question, then wait for me to answer back, then you will proceed with the next question, and so on. At the end of the last question ask if I would like to play again. Let\\u2019s start."}, {"role": "assistant", "content": "Welcome to the Planetary Trivia Game! Your first question is: What is the largest planet in our solar system? \\nA. Venus \\nB. Saturn \\nC. Jupiter \\nD. Uranus"}, {"role": "system", "content": "A"}]}' message='Post details'
+DEBUG:urllib3.util.retry:Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openai.com:443
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4258 request_id=0e73cd4a8ee1fb74d4c9f92e21a0597a response_code=200
+DEBUG:root:Message added, message:{'role': 'assistant', 'content': "The correct answer is C, Jupiter. Great job! You now have 10 points. Here's your second question: Which planet is known for its beautiful and distinct rings?\nA. Neptune \nB. Mars \nC. Jupiter \nD. Saturn"}
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:18:20] "GET /question?time=1682175627812&q=A HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.ip2location.io:443
+DEBUG:urllib3.connectionpool:https://api.ip2location.io:443 "GET /?key=F6286385D46E2262374D765A9F33E368&ip=172.31.128.1 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:18:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.128.8:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Request with ip 172.31.128.1
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:20:01] "GET / HTTP/1.1" 200 -
+INFO:root:Request with ip 172.31.128.1
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:20:01] "GET / HTTP/1.1" 200 -
+INFO:root:Request with ip 172.31.128.1
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:20:45] "GET / HTTP/1.1" 200 -
+INFO:root:Request with ip 172.31.128.1
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:20:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.128.8:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.128.8:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.ip2location.io:443
+DEBUG:urllib3.connectionpool:https://api.ip2location.io:443 "GET /?key=F6286385D46E2262374D765A9F33E368&ip=98.59.233.10 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:26:08] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.ip2location.io:443
+DEBUG:urllib3.connectionpool:https://api.ip2location.io:443 "GET /?key=F6286385D46E2262374D765A9F33E368&ip=5.88.65.220 HTTP/1.1" 200 None
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:26:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.128.8:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.ip2location.io:443
+DEBUG:urllib3.connectionpool:https://api.ip2location.io:443 "GET /?key=F6286385D46E2262374D765A9F33E368&ip=98.59.233.10 HTTP/1.1" 200 None
+INFO:root:Request with ip United States of America
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:26:59] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.ip2location.io:443
+DEBUG:urllib3.connectionpool:https://api.ip2location.io:443 "GET /?key=F6286385D46E2262374D765A9F33E368&ip=5.88.65.220 HTTP/1.1" 200 None
+INFO:root:Request with ip Italy
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:26:59] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.ip2location.io:443
+DEBUG:urllib3.connectionpool:https://api.ip2location.io:443 "GET /?key=F6286385D46E2262374D765A9F33E368&ip=5.88.65.220 HTTP/1.1" 200 None
+INFO:root:Request with ip Italy
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:27:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.128.8:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.ip2location.io:443
+DEBUG:urllib3.connectionpool:https://api.ip2location.io:443 "GET /?key=F6286385D46E2262374D765A9F33E368&ip=98.59.233.10 HTTP/1.1" 200 None
+INFO:root:Request from United States of America
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:29:37] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.ip2location.io:443
+DEBUG:urllib3.connectionpool:https://api.ip2location.io:443 "GET /?key=F6286385D46E2262374D765A9F33E368&ip=5.88.65.220 HTTP/1.1" 200 None
+INFO:root:Request from Italy
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:29:38] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.ip2location.io:443
+DEBUG:urllib3.connectionpool:https://api.ip2location.io:443 "GET /?key=F6286385D46E2262374D765A9F33E368&ip=5.88.65.220 HTTP/1.1" 200 None
+INFO:root:Request from Italy
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:29:40] "GET / HTTP/1.1" 200 -
+DEBUG:root:Generator created with timestamp 1682177380814
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.ip2location.io:443
+DEBUG:urllib3.connectionpool:https://api.ip2location.io:443 "GET /?key=F6286385D46E2262374D765A9F33E368&ip=5.88.65.220 HTTP/1.1" 200 None
+DEBUG:root:Message added, message:{'role': 'system', 'content': "Act like a trivia game master designer and generator.Your style is comedic but you only give factually correct questions and answers. Based around Calculus BC, for each round, come up with 1 question with 4 answers (A, B, C, D) that I can choose from. There is only one correct answer, and I must guess it. Wait for my response before asking the next question. I'll get 10 points for each correct answer I guess. I will receive 0 points for each incorrect answer. Increase the difficulty of each correct answer. Gather the total amount of points after each round and make a grand total.  I’ll have 10 rounds to reach 100 points. If I don’t reach 100 points in 10 rounds I’ll lose and ask if I want to start a new game. You will start by asking me only the first question, then wait for me to answer back, then you will proceed with the next question, and so on. At the end of the last question ask if I would like to play again. Let’s start."}
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "Act like a trivia game master designer and generator.Your style is comedic but you only give factually correct questions and answers. Based around Calculus BC, for each round, come up with 1 question with 4 answers (A, B, C, D) that I can choose from. There is only one correct answer, and I must guess it. Wait for my response before asking the next question. I\'ll get 10 points for each correct answer I guess. I will receive 0 points for each incorrect answer. Increase the difficulty of each correct answer. Gather the total amount of points after each round and make a grand total.  I\\u2019ll have 10 rounds to reach 100 points. If I don\\u2019t reach 100 points in 10 rounds I\\u2019ll lose and ask if I want to start a new game. You will start by asking me only the first question, then wait for me to answer back, then you will proceed with the next question, and so on. At the end of the last question ask if I would like to play again. Let\\u2019s start."}]}' message='Post details'
+DEBUG:urllib3.util.retry:Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openai.com:443
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5766 request_id=272381c3e1b9608503a35565517dc27e response_code=200
+DEBUG:root:Message added, message:{'role': 'assistant', 'content': "Welcome to Calculus BC trivia! Let's begin with Round 1:\n\nQuestion 1: What is the derivative of f(x) = x^2 - 3x + 2?\nA) 2x - 3\nB) 2x + 3\nC) 3x - 2\nD) 3x + 2"}
+INFO:werkzeug:172.31.128.1 - - [22/Apr/2023 15:29:50] "GET /topic?time=1682177380814&topic=Calculus%20BC HTTP/1.1" 200 -

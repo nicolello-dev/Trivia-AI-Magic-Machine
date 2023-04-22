@@ -1,18 +1,28 @@
 import flask
-from utils import Generator, getGenerator
+from flask import request
+from utils import Generator, getGenerator, logLoc
 import json
-import time
+import os
+import requests
 
 app = flask.Flask(__name__)
 
-gen = Generator(time.time())
+ip2loc = os.environ['IP2LOC']
 
 generators = []
+
+def getCountry():
+	headers_list = request.headers.getlist("X-Forwarded-For")
+	user_ip = headers_list[0] if headers_list else request.remote_addr
+	r = requests.get(f'https://api.ip2location.io/?key={ip2loc}&ip={user_ip}')
+	j = json.loads(r.text)
+	return j['country_name']
 
 @app.route('/topic', methods=['GET'])
 def setTopic():
 	timestamp = flask.request.args.get('time')
 	gen = Generator(timestamp)
+	gen.country = getCountry()
 	generators.append(gen)
 	
 	topic = flask.request.args.get('topic')
@@ -32,6 +42,7 @@ def getQuestion():
 
 @app.route('/')
 def home():
+	logLoc(getCountry())
 	return flask.render_template("index.html")
 
 if __name__ == '__main__':
